@@ -26,9 +26,12 @@ def play_game():
             print("You lose!")
             computer_score += 1
         print(f"Score: Player {player_score}, Computer {computer_score}")
-        print("Do you want to play again? (yes or no)")
+        print("Do you want to play again? (yes[y] or no[n])")
         play_again = input().lower()
-        if play_again != "yes":
+        # if ((play_again != "yes") or (play_again != "y")):
+        if not (play_again == "yes" or play_again == "y"):
+            print("Thanks for playing!")
             break
+
 
 play_game()
